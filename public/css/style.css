@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    color: var(--clr-brand-secondary);
+    background-color: var(--clr-background);
+
+    --hgt-navbar: 5rem;
+
+    --wdt-default: 90%;
+    --wdt-section-l: 1600px;
+    --wdt-section-s: 1200px;
+
+    --clr-brand-primary: #bd1313;
+    --clr-brand-secondary: #000000;
+    --clr-background: #ffffff;
+}
+
+menu,
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+header {
+    margin-top: var(--hgt-navbar);
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: var(--hgt-navbar);
+    color: var(--clr-brand-secondary);
+    background-color: var(--clr-background);
+    box-shadow: 0 0 4px 2px #00000080;
+}
+
+.top-bar ul {
+    width: var(--wdt-default);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar .logo {
+    height: 80%;
+}
+
+.top-bar .logo img {
+    height: 100%;
+}
+
+.top-bar-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.top-bar-links a.active {
+    color: var(--clr-brand-primary);
+}
+
+section {
+    width: var(--wdt-default);
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+header section {
+    max-width: var(--wdt-section-l);
+    text-align: center;
+}
+
+.title {
+    font-size: 5rem;
+}
+
+.subtitle {
+    font-size: 2rem;
+}
+
+main section {
+    max-width: var(--wdt-section-s);
+}
+
+.card-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card-container>li {
+    flex: 1 0 calc(var(--wdt-section-s)/3 - 1rem*2);
+}
+
+.card {
+    border-radius: .25rem;
+    background-color: var(--clr-brand-primary);
+    color: var(--clr-background);
+    padding: .75rem;
+    box-shadow: 0 0 4px #00000080;
+}
+
+.card span {
+    display: block;
+    margin-top: .25rem;
+}
